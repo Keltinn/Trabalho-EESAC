@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidade Escolar - Campanha Fotográfica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Special+Elite&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf6e3; /* Papel envelhecido leve */
+            color: #433422;
+        }
+
+        /* Banner Principal - Estilo Campanha */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1470&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            border-bottom: 10px solid #d4a373;
+        }
+
+        .hero h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Seção de Chamada */
+        .chamada {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #bc6c25;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(188, 108, 37, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #606c38;
+            transform: scale(1.05);
+        }
+
+        /* Categorias do Concurso */
+        .categorias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 5%;
+            background-color: #e9edc9;
+        }
+
+        .categoria-card {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 15px;
+            text-align: center;
+            border-bottom: 5px solid #bc6c25;
+        }
+
+        .categoria-card h3 { color: #283618; }
+
+        /* Footer */
+        footer {
+            background: #283618;
+            color: #fefae0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .hashtag {
+            font-family: 'Special Elite', cursive;
+            color: #dda15e;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <p>E.E. SANTO ANTÔNIO DO CRUZEIRO APRESENTA:</p>
+    <h1>Identidade Escolar</h1>
+    <p>Sua visão transforma o comum em arte.</p>
+    <br>
+    
+    <!-- ALTERAÇÃO AQUI: Substitua o '#' pelo link do seu Google Drive entre as aspas -->
+    <!-- Adicionei o target="_blank" para abrir em uma nova aba -->
+    <a href="https://forms.gle/CHTdFu7SardfyuMN7" target="_blank" class="cta-button">ENVIAR MINHA FOTO AGORA</a>
+</section>
+
+<div class="chamada">
+    <h2>A beleza está nos olhos de quem estuda aqui.</h2>
+    <p>Você não precisa de uma câmera profissional. O seu olhar sobre a nossa escola e a nossa gente é o que importa. Participe!</p>
+</div>
+
+<div class="categorias">
+    <div class="categoria-card">
+        <h3>🏠 Nossa História</h3>
+        <p>Fotos da arquitetura antiga, momentos e lembranças da Escola.</p>
+    </div>
+    <div class="categoria-card">
+        <h3>📖 Ensino </h3>
+        <p>A Escola de Santo Antônio do Cruzeiro.</p>
+    </div>
+    <div class="categoria-card">
+        <h3>👥 Nossa Gente</h3>
+        <p>Retratos que mostrem o sorriso e o trabalho no Ambiente Escolar.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Organização: Diretoria, Professores e Administração Escolar</p>
+    <p><strong>Escola Estadual de Santo Antônio do Cruzeiro</strong></p>
+    <p>Nepomuceno - MG</p>
+</footer>
+
+</body>
+</html>
