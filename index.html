@@ -10,17 +10,17 @@
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            background-color: #fdf6e3; /* Papel envelhecido leve */
+            background-color: #fdf6e3; 
             color: #433422;
         }
 
-        /* Banner Principal - Estilo Campanha */
+        /* Banner Principal */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                         url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1470&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,7 +33,7 @@
         .hero h1 {
             font-family: 'Special Elite', cursive;
             font-size: 3.5rem;
-            margin: 0;
+            margin: 10px 0;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
@@ -43,64 +43,84 @@
             text-transform: uppercase;
         }
 
-        /* Seção de Chamada */
-        .chamada {
-            padding: 50px 10%;
-            text-align: center;
+        /* Botões */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         .cta-button {
             background-color: #bc6c25;
             color: white;
-            padding: 20px 40px;
+            padding: 18px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: 0.3s;
-            display: inline-block;
             box-shadow: 0 4px 15px rgba(188, 108, 37, 0.4);
         }
 
-        .cta-button:hover {
+        .cta-button.pdf {
             background-color: #606c38;
+            box-shadow: 0 4px 15px rgba(96, 108, 56, 0.4);
+        }
+
+        .cta-button:hover {
             transform: scale(1.05);
+            filter: brightness(1.2);
         }
 
-        /* Categorias do Concurso */
-        .categorias {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 50px 5%;
-            background-color: #e9edc9;
+        /* Seção de Fotos Pré-selecionadas */
+        .galeria-container {
+            padding: 60px 10%;
+            text-align: center;
+            background-color: #fefae0;
         }
 
-        .categoria-card {
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .foto-card {
             background: white;
-            width: 280px;
-            padding: 20px;
-            margin: 15px;
-            border-radius: 15px;
-            text-align: center;
-            border-bottom: 5px solid #bc6c25;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+            transition: 0.3s;
         }
 
-        .categoria-card h3 { color: #283618; }
+        .foto-card:nth-child(even) { transform: rotate(2deg); }
 
-        /* Footer */
-        footer {
-            background: #283618;
-            color: #fefae0;
-            padding: 30px;
-            text-align: center;
+        .foto-card:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 10;
         }
 
-        .hashtag {
+        .foto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: sepia(20%);
+        }
+
+        .foto-card p {
             font-family: 'Special Elite', cursive;
-            color: #dda15e;
-            font-size: 1.5rem;
+            margin-top: 15px;
+            font-size: 0.9rem;
         }
+
+        /* Categorias e Footer mantidos... */
+        .chamada { padding: 50px 10%; text-align: center; }
+        .categorias { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 50px 5%; background-color: #e9edc9; }
+        .categoria-card { background: white; width: 280px; padding: 20px; margin: 15px; border-radius: 15px; text-align: center; border-bottom: 5px solid #bc6c25; }
+        footer { background: #283618; color: #fefae0; padding: 30px; text-align: center; }
     </style>
 </head>
 <body>
@@ -109,38 +129,8 @@
     <p>E.E. SANTO ANTÔNIO DO CRUZEIRO APRESENTA:</p>
     <h1>Identidade Escolar</h1>
     <p>Sua visão transforma o comum em arte.</p>
-    <br>
     
-    <!-- ALTERAÇÃO AQUI: Substitua o '#' pelo link do seu Google Drive entre as aspas -->
-    <!-- Adicionei o target="_blank" para abrir em uma nova aba -->
-    <a href="https://forms.gle/CHTdFu7SardfyuMN7" target="_blank" class="cta-button">ENVIAR MINHA FOTO AGORA</a>
-</section>
-
-<div class="chamada">
-    <h2>A beleza está nos olhos de quem estuda aqui.</h2>
-    <p>Você não precisa de uma câmera profissional. O seu olhar sobre a nossa escola e a nossa gente é o que importa. Participe!</p>
-</div>
-
-<div class="categorias">
-    <div class="categoria-card">
-        <h3>🏠 Nossa História</h3>
-        <p>Fotos da arquitetura antiga, momentos e lembranças da Escola.</p>
-    </div>
-    <div class="categoria-card">
-        <h3>📖 Ensino </h3>
-        <p>A Escola de Santo Antônio do Cruzeiro.</p>
-    </div>
-    <div class="categoria-card">
-        <h3>👥 Nossa Gente</h3>
-        <p>Retratos que mostrem o sorriso e o trabalho no Ambiente Escolar.</p>
-    </div>
-</div>
-
-<footer>
-    <p>Organização: Diretoria, Professores e Administração Escolar</p>
-    <p><strong>Escola Estadual de Santo Antônio do Cruzeiro</strong></p>
-    <p>Nepomuceno - MG</p>
-</footer>
-
-</body>
-</html>
+    <div class="button-group">
+        <a href="https://forms.gle/CHTdFu7SardfyuMN7" target="_blank" class="cta-button">ENVIAR MINHA FOTO</a>
+        
+        <a href="caminho/do/seu/regulamento.pdf" target="_blank" class="cta-
